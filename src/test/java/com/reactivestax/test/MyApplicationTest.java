@@ -34,26 +34,26 @@ public class MyApplicationTest {
 //    @Autowired
 //    MessageService messageService;
 
-	@Before
-	public void setUp() throws Exception {
-		context = new AnnotationConfigApplicationContext(MyApplicationTest.class);
-	}
-	
-	@After
-	public void tearDown() throws Exception {
-		context.close();
-	}
-
-	@Test
-	public void test() {
-		MyApplication app = context.getBean(MyApplication.class);
-        Assert.assertTrue("injected service should be EmailService type",app.getService() instanceof EmailService);
-        Assert.assertTrue("emailService call should complete successfully",app.processMessage("Hi Robin", "robin@reactivestax.com"));
-//        System.out.println("serviceHashCode = " + app.getService().hashCode());
+//	@Before
+//	public void setUp() throws Exception {
+//		context = new AnnotationConfigApplicationContext(MyApplicationTest.class);
+//	}
+//
+//	@After
+//	public void tearDown() throws Exception {
+//		context.close();
+//	}
+//
+//	@Test
+//	public void test() {
+//		MyApplication app = context.getBean(MyApplication.class);
+//        Assert.assertTrue("injected service should be EmailService type",app.getService() instanceof EmailService);
+//        Assert.assertTrue("emailService call should complete successfully",app.processMessage("Hi Robin", "robin@reactivestax.com"));
+////        System.out.println("serviceHashCode = " + app.getService().hashCode());
 
 //        MyApplication newApp = context.getBean(MyApplication.class);
 //        Assert.assertTrue("injected service should be EmailService type",newApp.getService() instanceof SMSService);
 //        Assert.assertTrue(newApp.processMessage("Hi Robin", "robin@reactivestax.com"));
 //        System.out.println("serviceHashCode = " + newApp.getService().hashCode());
     }
-}
+//}

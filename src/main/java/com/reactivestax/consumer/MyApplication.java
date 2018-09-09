@@ -17,8 +17,7 @@ public class MyApplication {
 
 	//field-based dependency injection
 	@Autowired
-    @Qualifier("emailService")
-	private MessageService service;
+	private MessageService service ;//= new EmailService();
 
 
 //	constructor-based dependency injection	
@@ -33,13 +32,14 @@ public class MyApplication {
 //		this.service=svc;
 //	}
 
-	public MessageService getService() {
-		return service;
-	}
+//	public MessageService getService() {
+//		return service;
+//	}
 
 	public boolean processMessage(String msg, String rec){
 		//some magic like validation, logging etc
-		return getService().sendMessage(msg, rec);
+//		return getService().sendMessage(msg, rec);
+		return service.sendMessage(msg, rec);
 	}
 }
 
